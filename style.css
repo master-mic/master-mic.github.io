@@ -1,0 +1,853 @@
+/*-----------------------
+  PARAMETRES GENERAUX  
+-----------------------*/
+
+:root{
+	font-size: 16px;
+	line-height: 23px;
+	font-family: sans-serif;
+	--darkgreen: darkgreen;
+	--lightgreen: lightgreen;
+	--thickness: 2px;
+	--offset: 1.5rem;
+	--violet: darkmagenta;
+	--orange: chocolate;
+	--rose: pink;
+	--bleu: royalblue;
+	--bg: rgb(255,248,220, 1); /*cornsilk*/
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0; padding: 0;
+	/*background-color: cornsilk; */
+	/*background-color:   #fff8dc38;*/
+	background-color: var(--bg);
+	animation: fadeIn 0.5s;
+	-webkit-animation: fadeIn 0.5s;
+	-moz-animation: fadeIn 0.5s;
+	-o-animation: fadeIn 0.5s;
+	-ms-animation: fadeIn 0.5s;
+}
+
+
+/*-----------------------
+          TEXTES         
+-----------------------*/
+
+/*menu*/
+h1, h2, h3, h4{
+	font-weight: lighter;
+}
+
+nav h1, nav h2{
+	font-family: "pilow";
+	font-size: 1.5rem;
+}
+
+span.b{ /*variante du B pour Boutures*/
+	font-variant-alternates: styleset(alt-a);
+}
+
+a, h1, h2, h3, h4, ul{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: var(--darkgreen);
+}
+
+li{
+	border-bottom: var(--thickness) solid var(--darkgreen);
+	/*pour éviter d'avoir un espace vide au-dessus des éléments*/
+	display: list-item; 
+	list-style: none;
+}
+
+h3{
+	padding-left: 1.5rem;
+	padding-bottom: 0.65rem;
+	font-weight: lighter;
+	font-size: 1.5rem;
+	font-family: "erode";
+}
+
+h3::before{
+	content: '• ';
+}
+
+.active{
+	font-family: "erode-b";
+}
+
+details[open]{
+	margin-bottom: var(--offset);
+}
+
+summary, summary::marker{
+	display: none;
+	display: list-item;
+	list-style: none;
+	cursor: pointer;
+}
+
+/*pages*/
+main p{
+	font-size: 3.5rem;
+	/*line-height: 57px;*/
+	line-height: 3.55rem;
+	margin: 0rem;
+	font-family: "erode";
+	margin-bottom: var(--offset);
+	font-kerning: normal;
+}
+
+main .a_propos, main a:hover{
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+	text-decoration-thickness: 3px;
+	cursor: help;
+}
+
+main a:hover{
+	color: black;
+}
+
+.italique {
+	font-family: "erode-it";
+}
+
+.regular{
+	font-family: "erode";
+}
+
+main .legendes{
+	font-size: 2.5rem;
+	line-height: 2.5rem;
+}
+
+main .lit, main .violet{
+	color: var(--violet);
+}
+
+main .spec, main .orange{
+	color: var(--orange);
+}
+
+main .expo, main .vert{
+	color: var(--darkgreen);
+}
+
+main .actu, main .rose{
+	color: var(--rose);
+}
+
+main .autre, main .bleu{
+	color: var(--bleu);
+}
+
+/*page d'article*/
+main.article h1{
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+	margin: 0rem;
+	font-family: "erode";
+	font-kerning: normal;
+	color: black;
+	text-align: center;
+}
+
+main.article .article_writer, main.article .article_chapeau{
+	margin-bottom: calc(var(--offset)*2);
+}
+
+main.article .article_writer{
+	font-size: 2rem;
+}
+
+main.article .article_image{
+	text-align: center;
+	margin-bottom: calc(var(--offset)*2);;
+	box-sizing: border-box;
+}
+
+main.article p{
+	font-size: 1.55rem;
+	line-height: 2rem;
+}
+
+main.article .article_chapeau > p{
+	font-family: "erode-it";
+}
+
+/*page index*/
+p.flex-item1{
+	font-size: 4.4rem;
+	font-family: "pilow";
+	color: white;
+	mix-blend-mode: difference;
+}
+
+p.flex-item2{
+	font-size: 1.8rem;
+	line-height: 1.8rem;
+	margin: 0;
+	color: white;
+	mix-blend-mode: difference;
+}
+
+
+
+/*-----------------------
+        STRUCTURE        
+-----------------------*/
+
+.enveloppe{
+	display: grid;
+	height: 100%;
+	grid-template-columns: repeat(12, [col-start] 1fr);
+	grid-template-rows: repeat(12, [row-start] 1fr);
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+.enveloppe_mobile, .mobile-only{
+	display: none;
+}
+
+main{
+	grid-column: 4 / 13;
+	grid-row: 1/13;
+	overflow: auto;
+	padding-top: calc(100vh/12*3);
+	padding-right: calc(100vw/12*1);
+	padding-bottom: calc(var(--offset)*2);
+}
+
+footer{ /*léger voile transparent en bas de page*/
+	background: rgb(255,248,220);
+	background: linear-gradient(0deg, rgba(255,248,220,1) 0%, rgba(255,248,220,0) 100%);
+	height: 5rem;
+	position: fixed;
+	bottom: 0vh;
+	left: calc(100vw/12*3);
+	width: 75%;
+}
+
+/* menu */
+nav {
+	display: grid;
+	/*height: 100%;*/
+	grid-column: 1 / span 2;
+	grid-row: 1/13;
+	grid-template-rows: subgrid;
+	border-right: var(--thickness) solid var(--darkgreen);
+	
+}
+
+ul{
+	padding: 0;
+}
+
+ul.menu_contenu{
+	grid-column: 1/ span 1;
+	grid-row: 1/6;
+	list-style-type: none;
+	overflow: hidden; /*si auto, barre de scroll qui apparaît et si rien, la nav ne se resize pas*/
+	display: grid;
+	grid-template-rows: subgrid;
+}
+
+.menu_elements{
+	padding: var(--offset);
+	/*line-height: 18px;*/
+}
+
+#menu_element_1{
+	grid-row: 1;
+}
+
+#menu_element_2{
+	grid-row: 2;
+}
+
+#menu_element_3{
+	grid-row: 3;
+}
+
+#menu_element_4{
+	grid-row: 4;
+}
+
+#menu_element_5{
+	grid-row: 5;
+}
+
+#menu_element_6{
+	display: none;
+}
+
+#menu_element_7{
+	display: none;
+}
+
+#menu_element_8{
+	display: none;
+}
+
+/*index*/
+main.accueil{
+	grid-column: 3 / 13;
+	grid-row: 1/13;
+	overflow: clip;
+	padding: 0;
+	background-image: url("./medias/images/accueil.png");
+	background-size: cover;
+	margin-left: -10px; /*valeur de la goutière de notre grille;*/
+}
+
+.flex-container{
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	align-content: center;
+	align-items: center;
+}
+
+.flex-item{
+	flex: 1;
+	text-align: center;
+	animation: fadeIn 2s;
+	-webkit-animation: fadeIn 2s;
+	-moz-animation: fadeIn 2s;
+	-o-animation: fadeIn 2s;
+	-ms-animation: fadeIn 2s;
+}
+
+.flex-item1{
+	/*background-color: blue;*/
+	flex: 100%;
+}
+
+.flex-item2{
+	/*background-color: yellow;*/
+}
+
+/*page d'article (par exemple : chien_51.html)*/
+main.article{
+	grid-column: 5 / 13;
+	grid-row: 1/13;
+	overflow: auto;
+	padding-top: calc(100vh/12*3);
+	padding-bottom: calc(var(--offset)*2);
+	padding-right: calc(100vw/12*2);
+}
+
+
+
+
+/*-----------------------
+        ANIMATIONS       
+-----------------------*/
+
+/* - au survol de la souris - */
+nav #menu_element_1:hover, nav  #menu_element_1:hover h1,
+nav #menu_element_2:hover, nav #menu_element_2:hover h2, 
+nav #menu_element_3:hover, nav #menu_element_3:hover h2, 
+nav #menu_element_4:hover, nav #menu_element_4:hover h2, 
+nav #menu_element_5:hover, nav #menu_element_5:hover h2{
+	color: var(--darkgreen);
+}
+
+nav h2:hover, nav h1:hover, nav h2:active, nav h1:active{
+	-webkit-transform: translateX(10px);
+	-moz-transform: translateX(10px);
+	-o-transform: translateX(10px);
+	transform: translateX(10px);
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+} 
+
+nav h2, nav h1{
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+
+nav h3:hover{
+	text-decoration-line: underline;
+}
+
+/* - details - */
+details[open] summary ~ * {
+	animation: sweep 0.5s ease-in-out;
+}
+
+#menu_element_3{
+	transition: all 3s ease-in-out;
+}
+
+@keyframes sweep {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+
+/* - au chargement de chaque page - */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
+
+/*-----------------------
+    IMPORTATION TYPOS    
+-----------------------*/
+
+@font-face {
+  font-family: "pilow";
+  src: url("./medias/fonts/Pilowlava-Regular.otf");
+}
+
+@font-feature-values "pilow" {
+	@styleset { alt-a: 1 }
+}
+
+@font-face {
+  font-family: "erode";
+  src: url("./medias/fonts/Erode-Medium.otf");
+}
+
+@font-face {
+  font-family: "erode-it";
+  src: url("./medias/fonts/Erode-MediumItalic.otf");
+}
+
+@font-face {
+  font-family: "erode-b";
+  src: url("./medias/fonts/Erode-Bold.otf");
+}
+
+
+
+
+/*-----------------------
+      MEDIA QUERIES      
+-----------------------*/
+
+
+/*-----------------------       grand écran-----------------------       */
+/* css de base */
+
+/*-----------------------       moyen écran-----------------------       */
+@media screen and (min-width: 1280px) and (max-width: 1600px) and (orientation: landscape){
+
+:root{
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.article_image img{
+	max-height: 40rem;
+}
+
+#menu_element_6{
+	display: none;
+}
+
+#menu_element_7{
+	display: none;
+}
+
+#menu_element_8{
+	display: none;
+}
+
+.enveloppe_mobile, .mobile-only{
+	display: none;
+}
+}
+
+
+/*-----------       petit écran + tablette horizontale        -----------*/
+@media screen and (min-width: 740px) and (max-width: 1279px) and (orientation: landscape){
+:root{
+	font-size: 12px;
+	line-height: 15px;
+	--offset: 1rem;
+}
+
+.enveloppe{
+	grid-template-columns: repeat(24, [col-start] 1fr);
+}
+
+nav{
+	grid-column: 1 / span 5;
+}
+
+nav .menu_elements{
+ line-height: 2.7rem;
+}
+
+main.accueil{
+	grid-column: 6 / 25;
+}
+
+main{
+	grid-column: 8 / 25;
+}
+
+main.article{
+	grid-column: 8 / 25;
+	padding-right: calc(100vw/24*2);
+}
+
+main p{
+	font-size: 2.5rem;
+	line-height: 3rem;
+}
+
+p.legendes{
+	font-size: 1.75rem;
+	line-height: 1.75rem;
+}
+
+#menu_element_6{
+	display: none;
+}
+
+#menu_element_7{
+	display: none;
+}
+
+#menu_element_8{
+	display: none;
+}
+
+.enveloppe_mobile, .mobile-only{
+	display: none;
+}
+}
+
+
+
+
+
+/*----------------     téléphone     ----------------*/
+@media screen and (max-width: 640px) and (orientation: portrait){
+
+:root{
+	font-size: 10px;
+	line-height: 12px;
+	--offset: 1rem;
+}
+
+
+.mobile-only{
+	display: none;
+}
+
+/* Seulement pour la page index >>>>>>>>>>*/
+.mobile_view{
+	display: none;
+}
+.enveloppe_mobile{
+	display: grid;
+	height: 100%;
+	grid-template-columns: repeat(12, [col-start] 1fr);
+	grid-template-rows: repeat(14, [row-start] 1fr);
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+.enveloppe_mobile main.accueil{
+	grid-column: 1 / 13;
+	grid-row: 1/15;
+	padding: 0;
+	background-image: none;
+	margin-left: 0px;
+}
+
+.enveloppe_mobile .flex-item{
+	padding-left: var(--offset);
+	text-align: left;
+}
+
+.enveloppe_mobile nav{
+	border-right: none;
+	grid-column: 1/13;
+	grid-row: 1/15;
+	z-index: 1;
+}
+
+.enveloppe_mobile nav h1, .enveloppe_mobile nav h2{
+	font-size: 2.2rem;
+}
+
+.enveloppe_mobile ul.menu_contenu{
+	align-content: center;
+	grid-row: 1/15;
+	grid-template-columns: subgrid;
+}
+
+.enveloppe_mobile li#menu_element_5{
+	border-bottom: none;
+}
+
+.enveloppe_mobile li#menu_element_2{
+	/*border-top: var(--darkgreen) var(--thickness) solid;*/
+}
+
+.enveloppe_mobile .menu_contenu h1, .enveloppe_mobile .menu_contenu h2{
+	text-align: left;
+}
+
+.enveloppe_mobile #menu_element_1{
+	display: none;
+}
+
+.enveloppe_mobile #menu_element_2{
+	grid-row: 9 / 10;
+}
+
+.enveloppe_mobile #menu_element_3{
+	display: none;
+}
+
+.enveloppe_mobile #menu_element_6{
+	grid-row: 10 / 11;
+	display: list-item;
+}
+
+.enveloppe_mobile #menu_element_7{
+	grid-row: 11 / 12;
+	display: list-item;
+}
+
+.enveloppe_mobile #menu_element_8{
+	grid-row: 12 / 13;
+	display: list-item;
+}
+
+.enveloppe_mobile #menu_element_4{
+	grid-row: 13 / 14;
+}
+
+.enveloppe_mobile #menu_element_5{
+	grid-row: 14 / 15;
+}
+
+.enveloppe_mobile #menu_element_5, .enveloppe_mobile #menu_element_4, 
+.enveloppe_mobile #menu_element_2, .enveloppe_mobile #menu_element_6, 
+.enveloppe_mobile #menu_element_7, .enveloppe_mobile #menu_element_8{
+	grid-column: 1/13;
+}
+
+/* <<<<<<<<<< Seulement pour la page index */
+
+/* menu >>>>>>>>>> */
+nav{
+	grid-column: 1 / 13;
+	grid-template-columns: subgrid;
+	border-right: none;
+}
+
+ul.menu_contenu{
+	grid-column: 1 / 13;
+
+	grid-template-rows: subgrid;
+	grid-template-columns: subgrid;
+	/*grid-gap: 10px;*/
+}
+
+/*Bouture(s)*/
+#menu_element_1{
+	grid-row: 1;
+	grid-column: 1 / span 7;
+}
+
+/*Calendrier*/
+#menu_element_4{
+	grid-row: 1;
+	grid-column: 8 / span 5;
+}
+
+/*Publications*/
+#menu_element_3{
+	display: none;
+}
+
+/*Textes*/
+#menu_element_6{
+	display: list-item;
+	grid-row: 2;
+	grid-column: 1 / span 4;
+}
+
+/*Medias*/
+#menu_element_7{
+	display: list-item;
+	grid-row: 2;
+	grid-column: 5 / span 4;
+}
+
+/*La Revue*/
+#menu_element_5{
+	grid-row: 2;
+	grid-column: 9 / span 4;
+}
+
+/*Regards extérieurs*/
+#menu_element_8{
+	display: list-item;
+	grid-row: 3;
+	grid-column: 1 / span 8;
+}
+
+/*A propos*/
+#menu_element_2{
+	grid-row: 3;
+	grid-column: 9 / span 4;
+}
+
+nav h1, nav h2{
+	font-size: 1.5rem;
+	letter-spacing: 0.05rem;
+}
+
+nav h1{
+	letter-spacing: 0.1rem;
+}
+
+ul.menu_contenu,{
+	overflow: auto;
+}
+
+ul.menu_contenu, nav{
+	grid-row: 1/4;
+}
+/*<<<<<<<<<< menu */
+
+/* pour toutes les pages >>>>>>>>>> */
+.enveloppe{
+	grid-template-rows: repeat(24, [row-start] 1fr);
+}
+
+main, main.article {
+	padding-top: 0;
+	padding-right: 10px;
+	padding-left: 10px;
+	grid-column: 1 / 13;
+	grid-row: 4/13;
+	overflow: initial;
+}
+
+main p, main.article h1{
+	font-size: 2.1rem;
+	line-height: 2.4rem;
+}
+
+main p{
+	margin-bottom: calc(var(--offset)*2);
+}
+
+main.article .article_writer {
+	font-size: 1.8rem;
+}
+
+footer{
+	left: 0;
+	width: 100%;
+	height: 3rem;
+}
+
+main .legendes, main.article p{
+	font-size: 1.65rem;
+	line-height: 2rem;
+}
+/* <<<<<<<<<< toutes les pages */
+
+main.article .article_image{
+}
+
+main.article img{
+	max-width: 60%;
+}
+}
+
+
+/* Message d'erreur si mauvaise orientation */
+
+/*----------------     tablette verticale     ----------------*/
+@media screen and (min-width: 640px) and (orientation: portrait){
+
+div.enveloppe{
+	display: none;
+}
+
+.mobile-only{
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+.mobile-only p{
+	text-align: center;
+	font-family: "erode";
+	font-size: 1.5rem;
+}
+
+}
+
+/*----------------     téléphone horizontal     ----------------*/
+@media screen and (max-height: 500px) and (orientation: landscape){
+
+div.enveloppe{
+	display: none;
+}
+
+.mobile-only{
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+.mobile-only p{
+	text-align: center;
+	font-family: "erode";
+	font-size: 1.5rem;
+}
+
+}
