@@ -673,12 +673,11 @@ ul.menu_contenu, nav{
 }
 
 .enveloppe_mobile main.accueil{
-/*	grid-column: 1 / 13;
-	grid-row: 1/15;
+	grid-column: 1 / 13;
+	grid-row: 4/8;
 	padding: 0;
 	background-image: none;
-	margin-left: 0px;*/
-	display: none;
+	margin-left: 0px;
 }
 
 .enveloppe_mobile .flex-item{
