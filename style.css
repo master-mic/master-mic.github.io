@@ -241,8 +241,10 @@ nav {
 	/*height: 100%;*/
 	grid-column: 1 / span 2;
 	grid-row: 1/13;
-	grid-template-rows: subgrid;
+	/*grid-template-rows: subgrid;*/ /*only works with firefox, not chrome*/
+	/*grid-template-rows: repeat(12, [row-start] 1fr);*/
 	border-right: var(--thickness) solid var(--darkgreen);
+	display: block;
 	
 }
 
@@ -257,6 +259,7 @@ ul.menu_contenu{
 	overflow: hidden; /*si auto, barre de scroll qui apparaît et si rien, la nav ne se resize pas*/
 	display: grid;
 	grid-template-rows: subgrid;
+	/*grid-template-rows: repeat(5, [row-start] 1fr);*/
 }
 
 .menu_elements{
@@ -575,17 +578,24 @@ p.legendes{
 
 
 /* menu >>>>>>>>>> */
-nav{
+.enveloppe nav{
 	grid-column: 1 / 13;
-	grid-template-columns: subgrid;
-	grid-template-rows: subgrid;
+	grid-row: 1 / 5;
+	/*grid-template-columns: subgrid;
+	grid-template-rows: subgrid;*/
+	grid-template-columns: repeat(12, [row-start] 1fr);
+	grid-template-rows: repeat(4, [row-start] 1fr);
 	border-right: none;
+	padding-top: 1.5rem;
 }
 
-ul.menu_contenu{
+.enveloppe ul.menu_contenu{
 	grid-column: 1 / 13;
-	grid-template-rows: subgrid;
-	grid-template-columns: subgrid;
+	display: grid;
+/*	grid-template-rows: subgrid;
+	grid-template-columns: subgrid;*/
+	grid-template-columns: repeat(12, [row-start] 1fr);
+	grid-template-rows: repeat(8, [row-start] 1fr);
 	/*grid-gap: 10px;*/
 }
 
@@ -664,19 +674,8 @@ nav h1.menu_elements{
 	overflow: auto;
 }
 
-.enveloppe nav{
-	grid-row: 1/5;
-}
-
 li{
 	text-align: left;
-}
-
-.enveloppe ul.menu_contenu{
-	display: grid;
-	grid-column: 1 / 13;
-	grid-template-columns: subgrid;
-	grid-template-rows: repeat(10, [row-start] 1fr);
 }
 /*<<<<<<<<<< menu */
 
@@ -759,8 +758,10 @@ main .a_propos, main .a_propos:hover, main a:hover{
 	grid-column: 1/13;
 	grid-row: 7/13;
 /*	z-index: 1;*/
-	grid-template-columns: subgrid;
-	grid-template-rows: subgrid;
+	grid-template-columns: repeat(12, [row-start] 1fr);
+	grid-template-rows: repeat(6, [row-start] 1fr);
+	/*grid-template-columns: subgrid;
+	grid-template-rows: subgrid;*/
 	border-right: none;
 }
 
@@ -771,7 +772,7 @@ main .a_propos, main .a_propos:hover, main a:hover{
 .enveloppe_mobile ul.menu_contenu{
 	grid-row: 1/7;
 	grid-column: 1 / 13;
-	grid-template-rows: subgrid;
+	grid-template-rows: repeat(6, [row-start] 1fr);
 }
 
 .enveloppe_mobile li#menu_element_5{
@@ -784,7 +785,7 @@ main .a_propos, main .a_propos:hover, main a:hover{
 }
 
 .enveloppe_mobile .menu_elements{
-	padding: var(--offset);
+	padding: calc(var(--offset)*2);
 }
 
 .enveloppe_mobile #menu_element_2{
