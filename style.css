@@ -660,11 +660,11 @@ nav h1.menu_elements{
 	font-size: 2rem;
 }
 
-ul.menu_contenu,{
+.enveloppe ul.menu_contenu,{
 	overflow: auto;
 }
 
-/*nav{
+.enveloppe nav{
 	grid-row: 1/4;
 }
 
@@ -672,12 +672,12 @@ li{
 	text-align: left;
 }
 
-ul.menu_contenu{
+.enveloppe ul.menu_contenu{
 	display: grid;
 	grid-column: 1 / 13;
 	grid-template-columns: subgrid;
 	grid-template-rows: repeat(8, [row-start] 1fr);
-}*/
+}
 /*<<<<<<<<<< menu */
 
 /* pour toutes les pages >>>>>>>>>> */
