@@ -587,11 +587,12 @@ p.legendes{
 }
 
 .enveloppe_mobile main.accueil{
-	grid-column: 1 / 13;
+	/*grid-column: 1 / 13;
 	grid-row: 1/15;
 	padding: 0;
 	background-image: none;
-	margin-left: 0px;
+	margin-left: 0px;*/
+	display:none;
 }
 
 .enveloppe_mobile .flex-item{
