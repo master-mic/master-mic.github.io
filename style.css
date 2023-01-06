@@ -665,7 +665,7 @@ nav h1.menu_elements{
 }
 
 .enveloppe nav{
-	grid-row: 1/4;
+	grid-row: 1/5;
 }
 
 li{
@@ -676,7 +676,7 @@ li{
 	display: grid;
 	grid-column: 1 / 13;
 	grid-template-columns: subgrid;
-	grid-template-rows: repeat(8, [row-start] 1fr);
+	grid-template-rows: repeat(10, [row-start] 1fr);
 }
 /*<<<<<<<<<< menu */
 
@@ -690,7 +690,7 @@ main, main.article {
 	padding-right: 10px;
 	padding-left: 10px;
 	grid-column: 1 / 13;
-	grid-row: 4/13;
+	grid-row: 5/13;
 	overflow: initial;
 }
 
