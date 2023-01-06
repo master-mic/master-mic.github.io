@@ -590,10 +590,14 @@ ul.menu_contenu{
 	/*grid-gap: 10px;*/
 }
 
+.menu_elements{
+	padding: var(--offset) 0;
+}
+
 /*Bouture(s)*/
 #menu_element_1{
 	grid-row: 1;
-	grid-column: 1 / span 7;
+	grid-column: 1 / span 5;
 }
 
 /*Calendrier*/
@@ -611,14 +615,14 @@ ul.menu_contenu{
 #menu_element_6{
 	display: list-item;
 	grid-row: 2;
-	grid-column: 1 / span 4;
+	grid-column: 1 / span 3;
 }
 
 /*Medias*/
 #menu_element_7{
 	display: list-item;
 	grid-row: 2;
-	grid-column: 5 / span 4;
+	grid-column: 5 / span 3;
 }
 
 /*La Revue*/
@@ -641,7 +645,7 @@ ul.menu_contenu{
 }
 
 nav h1, nav h2{
-	font-size: 1.5rem;
+	font-size: 1.75rem;
 	letter-spacing: 0.05rem;
 }
 
@@ -655,6 +659,10 @@ ul.menu_contenu,{
 
 ul.menu_contenu, nav{
 	grid-row: 1/4;
+}
+
+li{
+	text-align: center;
 }
 /*<<<<<<<<<< menu */
 
