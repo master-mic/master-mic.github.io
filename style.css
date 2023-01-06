@@ -750,7 +750,7 @@ ul.menu_contenu, nav{
 
 /* pour toutes les pages >>>>>>>>>> */
 .enveloppe{
-	grid-template-rows: repeat(24, [row-start] 1fr);
+	grid-template-rows: repeat(12, [row-start] 1fr);
 }
 
 main, main.article {
