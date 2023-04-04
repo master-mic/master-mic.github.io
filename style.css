@@ -182,8 +182,8 @@ main.article .article_chapeau > p{
 
 /*page index*/
 p.flex-item1{
-	font-size: 4.4rem;
-	font-family: "pilow";
+	font-size: 5.5rem;
+	font-family: erode-sb;
 	color: white;
 	mix-blend-mode: difference;
 }
@@ -449,6 +449,11 @@ details[open] summary ~ * {
 @font-face {
   font-family: "erode-it";
   src: url("./medias/fonts/Erode-MediumItalic.otf");
+}
+
+@font-face{
+	font-family: "erode-sb";
+	src: url("./medias/fonts/Erode-Semibold.otf");
 }
 
 @font-face {
