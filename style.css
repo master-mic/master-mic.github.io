@@ -146,6 +146,22 @@ main .autre, main .bleu{
 	color: var(--bleu);
 }
 
+div.revue_image img{
+	width: 30%; 
+	box-shadow: 2px 2px 5px darkgrey;
+	cursor: pointer;
+}
+
+div.revue_image img:hover{
+	width: 30%; 
+	box-shadow: 3px 3px 6px #909090;
+}
+
+div.revue_image p{
+	font-size: 1.55rem;
+	line-height: 2rem;
+}
+
 /*page d'article*/
 main.article h1{
 	font-size: 2.25rem;
