@@ -146,6 +146,12 @@ main .autre, main .bleu{
 	color: var(--bleu);
 }
 
+p.soulignement {
+	text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 2px;
+}
+
 div.revue_image img{
 	width: 30%; 
 	box-shadow: 2px 2px 5px darkgrey;
