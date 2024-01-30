@@ -130,11 +130,11 @@ main .lit, main .violet{
 	color: var(--violet);
 }
 
-main .spec, main .orange{
+main .expo, main .orange{
 	color: var(--orange);
 }
 
-main .expo, main .vert{
+main .spec, main .vert{
 	color: var(--darkgreen);
 }
 
