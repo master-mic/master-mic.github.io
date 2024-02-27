@@ -134,15 +134,15 @@ main .expo, main .orange{
 	color: var(--orange);
 }
 
-main .spec, main .vert{
+main .port, main .vert{
 	color: var(--darkgreen);
 }
 
-main .actu, main .rose{
+main .breve, main .rose{
 	color: var(--rose);
 }
 
-main .autre, main .bleu{
+main .essai, main .bleu{
 	color: var(--bleu);
 }
 
