@@ -28,6 +28,9 @@ html, body, footer p, footer ul{
 .index h2, h4 {
 	margin-top: 0;
 }
+.index h1{
+	font-family: "erode-black";
+}
 
 .index h3 {
 	margin-top: 1rem;
@@ -190,7 +193,8 @@ div.fond-gris{
 
 
 .chapo{
-	color: darkgrey;
+	color: black;
+	font-family: "erode-bold";
 }
 
 .lettrine img{
@@ -264,6 +268,10 @@ p.citation{
 	src: url("./typos/Erode-Semibold.otf");
 }
 
+@font-face{
+	font-family: "erode-black";
+	src: url("./typos/Erode-Bold.otf");
+}
 
 /* - au chargement de chaque page - */
 @keyframes fadeIn {
