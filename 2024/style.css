@@ -333,7 +333,7 @@ p.citation{
 
 @media screen and (orientation: portrait), (max-width: 500px){
 	html{
-		background-color: yellow;
+		background-color: orange;
 	}
 	div.texte{
 		grid-column: 2 / span 16;
@@ -443,7 +443,7 @@ p.citation{
 		width: 55vw;
 	}
 
-	.menu-button:hover + .mobile-menu-overlay, .mobile-menu-overlay:target {
+	.menu-button:focus + .mobile-menu-overlay, .mobile-menu-overlay:target {
 		display: block;
 	}
 
