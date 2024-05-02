@@ -49,7 +49,41 @@
 				</ul>
 			</nav>
 		</div>
+		<button class="menu-button">menu</button>
+		<div class="mobile-menu-overlay">
+			<div class="mobile-menu">
+				<ul>
+					<li style="margin-bottom: 5.5rem;"><a href="./index.html" style="font-family: 'erode-black';">fil rouge #1</a></li>
+					<li><a href="./avant_propos.html">Avant-propos</a></li>
+					<hr>
+					<li><a href="./edito.html">édito</a></li>
+					<hr>
+					<li><a href="./dossier.html">Dossier</a></li>
+					<hr>
+					<li><a href="./tania_mouraud.html">Tania Mouraud</a></li>
+					<hr>
+					<li><a href="./fabienne_yvert.html">Fabienne Yvert</a></li>
+					<hr>
+					<li><a href="./gladys_bregeon.html">Gladys Brégeon</a></li>
+					<hr>
+					<li><a href="./julie_morel.html">Julie Morel</a></li>
+					<hr>
+					<li><a href="./zac_deloupy.html">Zac Deloupy</a></li>
+					<hr>
+					<li><a href="./colophon.html">colophon</a></li>
+				</ul>
+			</div>
+		</div>
 	</footer>
-	<!-- <script src="script.js"></script> -->
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			var menuLinks = document.querySelectorAll('.mobile-menu a');
+			menuLinks.forEach(function(link) {
+				link.addEventListener('click', function() {
+				document.querySelector('.mobile-menu-overlay').style.display = 'none';
+			});
+		});
+	});
+	</script>
 </body>
 </html>

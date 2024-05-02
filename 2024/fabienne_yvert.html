@@ -11,7 +11,7 @@
 	<main>
 		<div class="texte">
 			<h1>Fabienne Yvert&nbsp;: un rapport assez physique à l’écriture</h1>
-			<h2>Propos recueillis par Marie Bouruet-Aubertot et&nbsp;Maëlie&nbsp;Saby</h2>
+			<h2>Propos recueillis par Marie&nbsp;Bouruet-Aubertot et&nbsp;Maëlie&nbsp;Saby</h2>
 			<p class="chapo"><span class="lettrine"><img src="./medias/f.jpeg" alt="Lettre Initiale">abienne Yvert</span> est une artiste, auteure et typographe. Son travail explore <span class="print"><br></span>les frontières entre les arts plastiques et la poésie. Elle a développé un style hybride, utilisant les mots comme matériau principal sur divers supports. Ses œuvres, qu’il s’agisse de livres d’artiste ou de créations plastiques, montrent une volonté de saisir le quotidien. Elle cherche à rendre visible l’invisible et à exprimer des expériences personnelles et universelles avec une <span class="print"><br></span>certaine justesse.</p>
 			<p class="question">À quel moment de votre parcours avez-vous commencé <span class="print"><br></span>à intégrer les mots dans votre pratique&nbsp;? </p>
 			<p class="reponse">Les mots étaient là depuis toujours. À l’époque où je suis entrée aux Beaux-Arts, ce n’était pas du tout à la mode d’écrire. C’était même plutôt mal vu. J’ai commencé en recouvrant les mots de peinture. Les mots étaient présents mais pas forcément lisibles. Ensuite, je me suis mise assez vite à réaliser des livres d’artiste avec diverses techniques&nbsp;: peinture, collage… </p>
@@ -80,7 +80,42 @@
 				</ul>
 			</nav>
 		</div>
+		<button class="menu-button">menu</button>
+		<div class="mobile-menu-overlay">
+			<div class="mobile-menu">
+				<ul>
+					<li style="margin-bottom: 5.5rem;"><a href="./index.html" style="font-family: 'erode-black';">fil rouge #1</a></li>
+					<li><a href="./avant_propos.html">Avant-propos</a></li>
+					<hr>
+					<li><a href="./edito.html">édito</a></li>
+					<hr>
+					<li><a href="./dossier.html">Dossier</a></li>
+					<hr>
+					<li><a href="./tania_mouraud.html">Tania Mouraud</a></li>
+					<hr>
+					<li><a href="./fabienne_yvert.html">Fabienne Yvert</a></li>
+					<hr>
+					<li><a href="./gladys_bregeon.html">Gladys Brégeon</a></li>
+					<hr>
+					<li><a href="./julie_morel.html">Julie Morel</a></li>
+					<hr>
+					<li><a href="./zac_deloupy.html">Zac Deloupy</a></li>
+					<hr>
+					<li><a href="./colophon.html">colophon</a></li>
+				</ul>
+			</div>
+		</div>
 	</footer>
 	<script src="script.js"></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			var menuLinks = document.querySelectorAll('.mobile-menu a');
+			menuLinks.forEach(function(link) {
+				link.addEventListener('click', function() {
+				document.querySelector('.mobile-menu-overlay').style.display = 'none';
+			});
+		});
+	});
+	</script>
 </body>
 </html>

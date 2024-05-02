@@ -11,7 +11,7 @@
 	<main>
 		<div class="texte">
 			<h1>Julie Morel&nbsp;: entre lisibilité et invisibilité</h1>
-			<h2>Propos recueillis par Célia Deschamps, Jessy Gris et Lou Laffont</h2>
+			<h2>Propos recueillis par Célia&nbsp;Deschamps, Jessy&nbsp;Gris et&nbsp;Lou&nbsp;Laffont</h2>
 			<p class="chapo"><span class="lettrine"><img src="./medias/j.jpeg" alt="Lettre Initiale">ulie Morel</span> intègre le numérique dans ses recherches artistiques depuis le milieu de ses études à l’école des Beaux-Arts de Lyon. Bien qu’à travers son œuvre elle aborde des pratiques insolites telles que le <span style="font-style:normal;">darknet</span>, elle ne se considère pas comme une activiste qui cherche à revendiquer ou dénoncer une manière d’utiliser les réseaux&nbsp;; pour autant, elle affirme que tout travail est politique. <span class="print"><br></span>C’est de manière subtile, en partant d’objets ordinaires du quotidien, qu’elle parvient à donner une dimension sociale et politique à ses créations. C’est là que réside toute l’in-<span class="print"><br></span>telligence de son travail. À mi-chemin entre l’art numérique <span class="print"><br></span>et l'art conceptuel elle apporte une note poétique et <span class="print"><br></span>sensible à ses réalisations en mêlant différents médiums, <span class="print"><br></span>se démarquant des standards de l’art purement numérique. Le langage matérialisé est partie prenante de son travail puisqu’elle le considère comme point de départ de ses projets&nbsp;: il est «&nbsp;une entrée poétique menant aux images&nbsp;». Julie Morel questionne notre rapport au langage ainsi que notre manière de l’appréhender, se jouant parfois de l’évidence d’une lecture, et laissant alors le public faire son propre <span class="print"><br></span>chemin. En effet, une grande partie de ses œuvres est réfléchie autour des notions binaires de lisibilité et d’illisibilité. Julie Morel porte un regard rempli d’humilité sur son travail, et cherche tout autant à questionner et à contextualiser sa pratique qu’elle a partagée avec nous dans cet entretien.</p>
 			<p class="question">Votre travail illustre la nature des rapports qu’entretiennent le texte et l’image dans une œuvre. À l’aide de différents médiums, vous avez la possibilité d’établir une relation d’égalité entre ces deux supports, ou au contraire d’instaurer une domination de l’un par rapport à l’autre. Dans votre processus de création artistique, le texte est-il un matériau comme un autre, ou est-il au contraire un élément structurant de vos travaux&nbsp;?</p>
 			<p class="reponse">Je vais vous répondre d’un point de vue très spécifique, celui de la personne qui produit et crée des images. Je n’ai pas d’autorité par rapport à cette question. Est-ce que le texte est prédominant par rapport à une image&nbsp;? De mon point de vue, oui. <span class="print"><br></span>Le texte est la condition d’accès à des images, que ce soit à un niveau conceptuel ou structurel, ou parfois, c’est le matériau <span class="print"><br></span>lui-même visuel du projet. Pour <em>Mourning Jewellery for Hadali</em> par exemple, éloigné de ma pratique numérique, où j’ai travaillé le tissage de cheveux, le texte a été la condition de choix des matériaux. Je parle de quelqu’un qui se noie&nbsp;: le mot «&nbsp;noyé&nbsp;» devient la manière de choisir l’essence de bois avec laquelle <span class="print"><br></span>j’ai travaillé. Ici, nous sommes au niveau de la conception <span class="print"><br></span>du projet, le mot détermine le matériau. Mais si l’on souhaite <span class="print"><br></span>aborder cette question d’un point de vue structurel, il convient d’aborder la notion du code. Le texte détermine les images <span class="print"><br></span>qui apparaissent sur l’écran ou dans l’espace. Parfois même, <span class="print"><br></span>la manière dont le projet est codé détermine le dispositif.</p>
@@ -85,7 +85,42 @@
 				</ul>
 			</nav>
 		</div>
+		<button class="menu-button">menu</button>
+		<div class="mobile-menu-overlay">
+			<div class="mobile-menu">
+				<ul>
+					<li style="margin-bottom: 5.5rem;"><a href="./index.html" style="font-family: 'erode-black';">fil rouge #1</a></li>
+					<li><a href="./avant_propos.html">Avant-propos</a></li>
+					<hr>
+					<li><a href="./edito.html">édito</a></li>
+					<hr>
+					<li><a href="./dossier.html">Dossier</a></li>
+					<hr>
+					<li><a href="./tania_mouraud.html">Tania Mouraud</a></li>
+					<hr>
+					<li><a href="./fabienne_yvert.html">Fabienne Yvert</a></li>
+					<hr>
+					<li><a href="./gladys_bregeon.html">Gladys Brégeon</a></li>
+					<hr>
+					<li><a href="./julie_morel.html">Julie Morel</a></li>
+					<hr>
+					<li><a href="./zac_deloupy.html">Zac Deloupy</a></li>
+					<hr>
+					<li><a href="./colophon.html">colophon</a></li>
+				</ul>
+			</div>
+		</div>
 	</footer>
 	<script src="script.js"></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			var menuLinks = document.querySelectorAll('.mobile-menu a');
+			menuLinks.forEach(function(link) {
+				link.addEventListener('click', function() {
+				document.querySelector('.mobile-menu-overlay').style.display = 'none';
+			});
+		});
+	});
+	</script>
 </body>
 </html>

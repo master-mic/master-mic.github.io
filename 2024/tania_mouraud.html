@@ -10,8 +10,8 @@
 	<!-- <div class= "fond"></div> -->
 	<main>
 		<div class="texte">
-			<h1>Tania Mouraud&nbsp;: prendre le temps de déchiffrer</h1>
-			<h2>Propos recueillis par Anaëlle Ducarouge, Carla Gallon et&nbsp;Audrey&nbsp;Rivollier</h2>
+			<h1>Tania Mouraud&nbsp;: prendre le&nbsp;temps de déchiffrer</h1>
+			<h2>Propos recueillis par Anaëlle&nbsp;Ducarouge, Carla&nbsp;Gallon et&nbsp;Audrey&nbsp;Rivollier</h2>
 			<p class="chapo"><span class="lettrine"><img src="./medias/t.jpeg" alt="Lettre Initiale">ania Mouraud</span> est une artiste contemporaine qui crée ses œuvres à partir <span class="print"><br></span>de textes qu’elle s’efforce d’étirer, <span class="print"><br></span>déformer, transformer, recoller, <span class="print"><br></span>explorant ainsi les limites entre lisibilité et illisibilité. Le texte fait alors image en ce sens qu’il apparaît dans un premier temps comme une œuvre picturale, que l’on doit prendre <span class="print"><br></span>le temps d’observer pour percevoir le mot qui s’y cache. <span class="print"><br></span>De cette manière, l’image fait aussi texte pour celles et ceux qui prendront le temps de déchiffrer les lettres dissimulées.</p>
 			<p class="question">Certaines de vos installations ou performances ont lieu, <span class="print"><br></span>non pas dans un musée, mais dans l’espace urbain, comme c’est le cas de vos <em>City Performances</em> dès les années 1970. Qu’est-ce qui oriente les choix de spatialisation de vos œuvres&nbsp;? Pourquoi exposer vos <em>Mots-Mêlés</em> dans un musée, et vos <em>City Performances</em> dans l’espace urbain par exemple&nbsp;?</p>
 			<p class="reponse">J’appartiens à une génération où les jeunes filles étaient principalement élevées en vue de se marier. De mon côté, j’ai décidé de suivre une voie différente et de devenir artiste. À mon avis, exposer dans une galerie équivalait à occuper un espace public. Sortir de chez moi pour exposer dans une galerie revenait donc à devenir une artiste. Après un certain temps, je me suis sentie confinée dans cet environnement et j’ai ressenti le besoin de m’évader. J’avais déjà réalisé des œuvres postales et je voulais maintenant les amener dans la rue. Pour moi, il est devenu <span class="print"><br></span>très important d’intervenir dans la ville. Aujourd’hui encore, <span class="print"><br></span>les <em>street artists</em> ont beaucoup d’estime pour moi&nbsp;; je représente un peu leur marraine, leur grand-mère. À Fluctuart, des jeunes artistes de <em>street art</em> m’ont présentée en disant qu’ils étaient <span class="print"><br></span>très honorés, que je les avais beaucoup influencés, et qu’ils avaient réalisé une œuvre en mon honneur. Vous ne trouverez pas beaucoup d’artistes de ce type dans une galerie. Je me considère un peu comme une saltimbanque, je me sens très à l’aise dans la rue. Cependant, je n’expose pas les mêmes œuvres en galerie. Par exemple, je ne vais pas installer un <em>Mot-mêlé</em> dans la rue, cela n’aurait aucun sens et ce n’est pas la même façon de procéder. Techniquement, c’est différent, c’est quelque chose que vous devez voir à l’intérieur.</p>
@@ -72,7 +72,42 @@
 				</ul>
 			</nav>
 		</div>
+		<button class="menu-button">menu</button>
+		<div class="mobile-menu-overlay">
+			<div class="mobile-menu">
+				<ul>
+					<li style="margin-bottom: 5.5rem;"><a href="./index.html" style="font-family: 'erode-black';">fil rouge #1</a></li>
+					<li><a href="./avant_propos.html">Avant-propos</a></li>
+					<hr>
+					<li><a href="./edito.html">édito</a></li>
+					<hr>
+					<li><a href="./dossier.html">Dossier</a></li>
+					<hr>
+					<li><a href="./tania_mouraud.html">Tania Mouraud</a></li>
+					<hr>
+					<li><a href="./fabienne_yvert.html">Fabienne Yvert</a></li>
+					<hr>
+					<li><a href="./gladys_bregeon.html">Gladys Brégeon</a></li>
+					<hr>
+					<li><a href="./julie_morel.html">Julie Morel</a></li>
+					<hr>
+					<li><a href="./zac_deloupy.html">Zac Deloupy</a></li>
+					<hr>
+					<li><a href="./colophon.html">colophon</a></li>
+				</ul>
+			</div>
+		</div>
 	</footer>
 	<script src="script.js"></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			var menuLinks = document.querySelectorAll('.mobile-menu a');
+			menuLinks.forEach(function(link) {
+				link.addEventListener('click', function() {
+				document.querySelector('.mobile-menu-overlay').style.display = 'none';
+			});
+		});
+	});
+	</script>
 </body>
 </html>

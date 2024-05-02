@@ -10,8 +10,8 @@
 	<!-- <div class="fond"></div> -->
 	<main>
 		<div class="texte">
-			<h1>Zac Deloupy&nbsp;: à la croisée des arts</h1>
-			<h2>Propos recueillis par Alix Jamet, Clara Mesnil et Ciarán Hyams</h2>
+			<h1>Zac Deloupy&nbsp;: à la croisée des&nbsp;arts</h1>
+			<h2>Propos recueillis par Alix&nbsp;Jamet, Clara&nbsp;Mesnil et&nbsp;Ciarán&nbsp;Hyams</h2>
 			<p class="chapo"><span class="lettrine"><img src="./medias/z.jpeg" alt="Lettre Initiale">ac Deloupy</span> déploie, à travers ses bandes dessinées, un langage visuel riche et expressif, où chaque dessin dialogue avec les mots pour créer une émotion et transmettre un message. Le texte devient ainsi le compagnon indissociable de l’image, enrichissant et amplifiant la portée narrative de chaque planche. Dans cet univers artistique, chaque détail compte. Chez Deloupy le travail esthétique n’est jamais gratuit. En effet, ses œuvres sont souvent porteuses d’un engagement social profond, abordant avec finesse des thématiques cruciales telles que <span class="print"><br></span>l’injustice, la marginalisation et les luttes quotidiennes <span class="print"><br></span>des individus pour leur dignité. À travers des personnages hauts en couleur et des intrigues captivantes, il invite <span class="print"><br></span>le lecteur à réfléchir sur les enjeux de notre société, <span class="print"><br></span>tout en lui offrant un moment d’évasion et de réflexion.</p>
 			<p class="question">Certains moments-clés de vos bandes dessinées se déroulent sans dialogues, laissant l’image raconter <span class="print"><br></span>seule une partie de l’histoire. Comment décidez-vous <span class="print"><br></span>quand laisser l’image s’exprimer sans texte&nbsp;?</p>
 			<p class="reponse">Le fondement de la bande dessinée réside dans l’association harmonieuse de l’image et du texte, sans qu’ils se gênent mutuellement. C’est un point que j’explique fréquemment <span class="print"><br></span>lors de collaborations avec divers scénaristes, car je travaille avec différents scénaristes à chaque projet, et souvent avec <span class="print"><br></span>différents éditeurs. J’explique généralement que nous <span class="print"><br></span>élaborons un premier jet basé sur le scénario qui m’est fourni. Ensuite, ce travail prend la forme d’un crayonné, ce qui permet d’analyser ce qui fonctionne ou non dans les deux aspects, <span class="print"><br></span>que ce soit au niveau du texte, des dialogues, ou de l’image. <span class="print"><br></span>Il peut arriver que des ajustements soient nécessaires, <span class="print"><br></span>que ce soit pour affiner, réduire ou amplifier certaines parties. Parfois, des éléments ne fonctionnent pas dans le texte ou <span class="print"><br></span>dans l’image, et cette première étape permet de les identifier. Elle offre également la possibilité de supprimer des éléments textuels si l’image se suffit à elle seule. Lorsque nous lisons <span class="print"><br></span>une bande dessinée, notre cerveau enregistre simultanément <span class="print"><br></span>le texte et les images. Le travail de liaison entre le texte et l’image doit être parfaitement intégré, de sorte que le lecteur puisse suivre l’histoire sans buter ni sur le texte mal tourné, <span class="print"><br></span>ni sur une image incompréhensible.</p>
@@ -86,7 +86,42 @@
 				</ul>
 			</nav>
 		</div>
+		<button class="menu-button">menu</button>
+		<div class="mobile-menu-overlay">
+			<div class="mobile-menu">
+				<ul>
+					<li style="margin-bottom: 5.5rem;"><a href="./index.html" style="font-family: 'erode-black';">fil rouge #1</a></li>
+					<li><a href="./avant_propos.html">Avant-propos</a></li>
+					<hr>
+					<li><a href="./edito.html">édito</a></li>
+					<hr>
+					<li><a href="./dossier.html">Dossier</a></li>
+					<hr>
+					<li><a href="./tania_mouraud.html">Tania Mouraud</a></li>
+					<hr>
+					<li><a href="./fabienne_yvert.html">Fabienne Yvert</a></li>
+					<hr>
+					<li><a href="./gladys_bregeon.html">Gladys Brégeon</a></li>
+					<hr>
+					<li><a href="./julie_morel.html">Julie Morel</a></li>
+					<hr>
+					<li><a href="./zac_deloupy.html">Zac Deloupy</a></li>
+					<hr>
+					<li><a href="./colophon.html">colophon</a></li>
+				</ul>
+			</div>
+		</div>
 	</footer>
 	<script src="script.js"></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			var menuLinks = document.querySelectorAll('.mobile-menu a');
+			menuLinks.forEach(function(link) {
+				link.addEventListener('click', function() {
+				document.querySelector('.mobile-menu-overlay').style.display = 'none';
+			});
+		});
+	});
+	</script>
 </body>
 </html>

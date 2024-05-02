@@ -11,7 +11,7 @@
 	<main>
 		<div class="texte">
 			<h1>Gladys Brégeon&nbsp;: le texte, matière en mouvement&nbsp;?</h1>
-			<h2>Propos recueillis par Lisa Califano</h2>
+			<h2>Propos recueillis par Lisa&nbsp;Califano</h2>
 			<p class="chapo"><span class="lettrine"><img src="./medias/g.jpeg" alt="Lettre Initiale">ladys Brégeon</span> est une artiste plasticienne et autrice. Dans son travail artistique, l’écriture et l’image, deux «&nbsp;langues du trait&nbsp;», dialoguent, <span class="print"><br></span>se confrontent et se complètent. <span class="print"><br></span>Elle façonne ses livres d’artiste comme des espaces performatifs <span class="print"><br></span>de textes graphiques et poétiques, <span class="print"><br></span>où les frontières entre les mots <span class="print"><br></span>et les images s’estompent, laissant place à une expression artistique singulière et captivante.</p>
 			<p class="question">La première chose que l’on peut remarquer dans votre travail artistique, c’est cette alliance entre le texte et l’image. Qu’est-ce qui vous a menée à cette pratique&nbsp;?</p>
 			<p class="reponse">Ce que j’ai commencé à faire, c’est écrire, bien que l’image <span class="print"><br></span>ait ensuite pris une place plus importante dans mon travail. <span class="print"><br></span>Mais l’écriture s’est infiltrée comme une sorte de système <span class="print"><br></span>vasculaire&nbsp;: elle était sous-jacente jusqu’à irriguer l’ensemble <span class="print"><br></span>de la création et devenir saillante. Elle s’est alors légitimement intégrée dans mon travail plastique au fil du temps. Alors que ma formation aux Beaux-Arts de Paris ne comprenait pas <span class="print"><br></span>d’atelier spécifique dédié à l’écriture, il m’arrivait tout de même d’écrire sur des peintures. À cette époque, le texte était retenu par l’image et ne s’assumait pas.</p>
@@ -72,7 +72,42 @@
 				</ul>
 			</nav>
 		</div>
+		<button class="menu-button">menu</button>
+		<div class="mobile-menu-overlay">
+			<div class="mobile-menu">
+				<ul>
+					<li style="margin-bottom: 5.5rem;"><a href="./index.html" style="font-family: 'erode-black';">fil rouge #1</a></li>
+					<li><a href="./avant_propos.html">Avant-propos</a></li>
+					<hr>
+					<li><a href="./edito.html">édito</a></li>
+					<hr>
+					<li><a href="./dossier.html">Dossier</a></li>
+					<hr>
+					<li><a href="./tania_mouraud.html">Tania Mouraud</a></li>
+					<hr>
+					<li><a href="./fabienne_yvert.html">Fabienne Yvert</a></li>
+					<hr>
+					<li><a href="./gladys_bregeon.html">Gladys Brégeon</a></li>
+					<hr>
+					<li><a href="./julie_morel.html">Julie Morel</a></li>
+					<hr>
+					<li><a href="./zac_deloupy.html">Zac Deloupy</a></li>
+					<hr>
+					<li><a href="./colophon.html">colophon</a></li>
+				</ul>
+			</div>
+		</div>
 	</footer>
 	<script src="script.js"></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			var menuLinks = document.querySelectorAll('.mobile-menu a');
+			menuLinks.forEach(function(link) {
+				link.addEventListener('click', function() {
+				document.querySelector('.mobile-menu-overlay').style.display = 'none';
+			});
+		});
+	});
+	</script>
 </body>
 </html>
