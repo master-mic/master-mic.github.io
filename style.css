@@ -369,7 +369,30 @@ main.article{
 	padding-right: calc(100vw/12*2);
 }
 
+main.page-revue{
+	display: flex;
+	flex-direction: row;
+}
 
+/* Appliquer un style aux div enfants pour les espacer et les aligner correctement */
+main.page-revue > div {
+	flex: 1; /* Fait en sorte que les div occupent la même largeur */
+	margin-right: 20px; /* Espacement entre les div */
+/*	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;*/
+	text-align: center;
+}
+
+/* Supprimer la marge de droite du dernier élément */
+main.page-revue > div:last-child {
+	margin-right: 0;
+}
+
+main.page-revue div.revue_image img {
+	width: 50%;
+}
 
 
 /*-----------------------
