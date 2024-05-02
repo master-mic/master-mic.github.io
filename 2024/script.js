@@ -107,12 +107,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	if (isMobilePortrait) {
 		document.addEventListener('click', function(event) {
 			// Vérifie si le clic s'est produit en dehors des images et des légendes
-			var isClickOutsideImageAndLegend = !event.target.closest('.image-wrapper') && !event.target.closest('.image-description');
+			var isClickOutsideImageAndLegend = !event.target.closest('.image-wrapper') && !event.target.closest('[id^="id-"]');
 			
 			if (isClickOutsideImageAndLegend) {
 				// Cacher toutes les légendes
 				Object.values(spans).forEach(span => {
-					var description = span.querySelector('.image-description');
+					var description = span.querySelector('[id^="id-"]');
 					if (description) {
 						description.style.display = 'none'; // Hide the description
 					}
