@@ -394,6 +394,7 @@ p.citation{
 	}
 
 	.menu-button{
+		color: black;
 		display: block;
 		position: fixed;
 		bottom: 0;
@@ -436,6 +437,11 @@ p.citation{
 
 	.menu-button:focus + .mobile-menu-overlay, .mobile-menu-overlay:target {
 		display: block;
+	}
+
+	.image-container, div.fond-gris, div.fond, .image-wrapper img {
+		height: 65vh;
+		width: 55vw;
 	}
 
 }
