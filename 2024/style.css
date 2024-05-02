@@ -333,7 +333,7 @@ p.citation{
 
 @media screen and (orientation: portrait), (max-width: 500px){
 	html{
-		background-color: orange;
+		background-color: darkmagenta;
 	}
 	div.texte{
 		grid-column: 2 / span 16;
@@ -369,7 +369,7 @@ p.citation{
 	/* Style for mobile menu */
 	.mobile-menu {
 		position: fixed;
-		top: calc(50% - 1rem);
+		top: calc(50% - 5rem);
 		left: 50%;
 		transform: translate(-50%, -50%);
 		padding: 20px;
@@ -405,7 +405,7 @@ p.citation{
 		width: -moz-available;
 		width: -webkit-fill-available;
 		width: stretch;
-		height: 4rem;
+		height: 10rem;
 		display: flex;
 		-webkit-box-pack: justify;
 		-ms-flex-pack: justify;
