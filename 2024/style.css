@@ -331,7 +331,7 @@ p.citation{
 
 }
 
-@media (max-width: 500px){
+@media (orientation: portrait), (max-width: 500px){
 	div.texte{
 		grid-column: 2 / span 16;
 		margin-top: 20vh;
