@@ -332,6 +332,9 @@ p.citation{
 }
 
 @media screen and (orientation: portrait), (max-width: 500px){
+	.screen{
+		display: none;
+	}
 	html{
 		/*background-color: darkmagenta;*/
 	}
