@@ -331,14 +331,10 @@ p.citation{
 
 }
 
-
-@media screen and (orientation: portrait){
+@media screen and (orientation: portrait), (max-width: 500px){
 	html{
-		background-color: green;
+		background-color: yellow;
 	}
-}
-
-@media (max-width: 500px){
 	div.texte{
 		grid-column: 2 / span 16;
 		margin-top: 20vh;
@@ -409,7 +405,7 @@ p.citation{
 		width: -moz-available;
 		width: -webkit-fill-available;
 		width: stretch;
-		height: 2rem;
+		height: 4rem;
 		display: flex;
 		-webkit-box-pack: justify;
 		-ms-flex-pack: justify;
@@ -447,7 +443,7 @@ p.citation{
 		width: 55vw;
 	}
 
-	.menu-button:focus + .mobile-menu-overlay, .mobile-menu-overlay:target {
+	.menu-button:hover + .mobile-menu-overlay, .mobile-menu-overlay:target {
 		display: block;
 	}
 
