@@ -105,3 +105,26 @@ document.addEventListener("DOMContentLoaded", function() {
 		loadImagesIfVisible();
 	});
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Vérifier si l'appareil est un mobile en mode portrait
+    var isMobilePortrait = window.innerWidth < window.innerHeight;
+    
+    // Ajouter un écouteur d'événement pour les clics en dehors des images et des légendes sur les mobiles en mode portrait uniquement
+    if (isMobilePortrait) {
+        document.addEventListener('click', function(event) {
+            // Vérifie si le clic s'est produit en dehors des images et des légendes
+            var isClickOutsideImageAndLegend = !event.target.closest('.image-wrapper') && !event.target.closest('.image-description');
+            
+            if (isClickOutsideImageAndLegend) {
+                // Cacher toutes les légendes
+                Object.values(spans).forEach(span => {
+                    var description = span.querySelector('.image-description');
+                    if (description) {
+                        description.style.display = 'none'; // Hide the description
+                    }
+                });
+            }
+        });
+    }
+});
