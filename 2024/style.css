@@ -331,7 +331,14 @@ p.citation{
 
 }
 
-@media (orientation: portrait), (max-width: 500px){
+
+@media (orientation: portrait){
+	html{
+		background-color: green;
+	}
+}
+
+@media (max-width: 500px){
 	div.texte{
 		grid-column: 2 / span 16;
 		margin-top: 20vh;
@@ -435,13 +442,15 @@ p.citation{
 		z-index: 5;
 	}
 
-	.menu-button:focus + .mobile-menu-overlay, .mobile-menu-overlay:target {
-		display: block;
-	}
-
 	.image-container, div.fond-gris, div.fond, .image-wrapper img {
 		height: 65vh;
 		width: 55vw;
 	}
+
+	.menu-button:focus + .mobile-menu-overlay, .mobile-menu-overlay:target {
+		display: block;
+	}
+
+
 
 }
