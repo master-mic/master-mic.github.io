@@ -9,6 +9,7 @@
 
 
 const menuItems = document.querySelectorAll('.menu-item');
+console.log[menuItems]
 
 // Add event listeners to each menu item
 menuItems.forEach(item => {
