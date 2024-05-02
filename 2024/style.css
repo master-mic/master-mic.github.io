@@ -2,6 +2,8 @@
   background: lightgrey;
 }
 
+.print{display: none;}
+
 html, body{
 	animation: fadeIn 0.5s;
 	-webkit-animation: fadeIn 0.5s;
@@ -13,6 +15,10 @@ html, body{
 html, body, footer p, footer ul{
 	margin: 0;
 	padding: 0;
+}
+
+.index{
+	margin-bottom: 5rem;
 }
 
 .index h1, h2, h3{
@@ -67,7 +73,7 @@ html, body, footer p, footer ul{
 	transition: opacity 150ms;
 }
 
-.main-nav {
+.main-nav, .sm-nav{
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -77,7 +83,7 @@ html, body, footer p, footer ul{
 	flex-basis: auto;
 }
 
-.main-nav li {
+.main-nav li, .sm-nav li {
     display: inline-block;
     margin-left: 0.5rem;
     text-align: right;
@@ -224,6 +230,24 @@ p.question{
 
 p.reponse{
 
+}
+
+sup{
+	vertical-align: top;
+}
+
+p > a {
+	color: black;
+}
+
+p > a:hover{
+	color: lightgrey;
+}
+
+p.citation{
+	text-align: center;
+	margin: 5rem 0;
+	font-size: 1.3rem;
 }
 
 .image-description{
