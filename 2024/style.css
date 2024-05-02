@@ -333,7 +333,7 @@ p.citation{
 
 @media screen and (orientation: portrait), (max-width: 500px){
 	html{
-		background-color: darkmagenta;
+		/*background-color: darkmagenta;*/
 	}
 	div.texte{
 		grid-column: 2 / span 16;
@@ -393,7 +393,7 @@ p.citation{
 
 	.mobile-menu ul li a {
 
-		font-size: 1.5rem;
+		font-size: 1.1rem;
 	}
 
 	.mobile-menu ul li:first-of-type{
