@@ -298,11 +298,11 @@ p.citation{
 		margin-top: 20vh;
 	}
 	html{
-		background-color: pink;
+		/*background-color: pink;*/
 	}
 }
 
-@media (max-width: 950px) and (min-width: 401px){
+@media (max-width: 950px) and (min-width: 501px){
 	div.texte{
 		grid-column: 3 / span 14;
 		margin-top: 20vh;
@@ -331,7 +331,7 @@ p.citation{
 
 }
 
-@media (max-width: 400px){
+@media (max-width: 500px){
 	div.texte{
 		grid-column: 2 / span 16;
 		margin-top: 20vh;
