@@ -369,6 +369,28 @@ p.citation{
 	p.site-title{
 	}
 
+	.accueil{
+		position: absolute;
+		bottom: 0;
+	}
+
+	.index {
+	}
+
+	.index h2{
+		font-size: 1.1rem;
+	}
+
+	.index h3{
+		font-size: 0.9rem;
+		line-height: 0.9rem;
+		font-family: "erode-regular";
+	}
+
+	.index h4 {
+		display: none;
+	}
+
 	/* Style for mobile menu */
 	.mobile-menu {
 		position: fixed;
@@ -395,7 +417,6 @@ p.citation{
 	}
 
 	.mobile-menu ul li a {
-
 		font-size: 1.1rem;
 	}
 
