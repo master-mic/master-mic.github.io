@@ -332,7 +332,7 @@ p.citation{
 }
 
 
-@media (orientation: portrait){
+@media screen and (orientation: portrait){
 	html{
 		background-color: green;
 	}
