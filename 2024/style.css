@@ -323,7 +323,7 @@ p.citation{
 	}
 
 	.image-container, div.fond-gris, div.fond, .image-wrapper img {
-		height: 65vh;
+		height: 45vh;
 		width: 55vw;
 	}
 
@@ -437,7 +437,7 @@ p.citation{
 		left: 0;
 		width: 100%;
 		height: calc(100% - 3rem);
-		background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+		background-color: rgba(255, 255, 255); /* Semi-transparent white background */
 		z-index: 5;
 	}
 
