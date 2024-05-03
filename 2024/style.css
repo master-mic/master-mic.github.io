@@ -399,7 +399,7 @@ p.citation{
 		transform: translate(-50%, -50%);
 		padding: 20px;
 		z-index: 6;
-		width: 50vw;
+		width: 40vw;
 	}
 
 	/* Style for mobile menu items */
@@ -412,7 +412,7 @@ p.citation{
 	}
 
 	.mobile-menu ul li {
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.25rem;
 		z-index: 10;
 	}
 
@@ -421,7 +421,7 @@ p.citation{
 	}
 
 	.mobile-menu ul li:first-of-type{
-		margin-bottom: 2rem;
+		/*margin-bottom: 2rem;*/
 	}
 
 	.menu-button{
