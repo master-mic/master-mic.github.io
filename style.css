@@ -32,6 +32,10 @@ html, body{
 }
 
 
+.del{
+	display: none;
+}
+
 /*-----------------------
           TEXTES         
 -----------------------*/
@@ -323,16 +327,39 @@ ul.menu_contenu{
 
 /*index*/
 main.accueil{
-	grid-column: 3 / 13;
+/*	grid-column: 3 / 13;
 	grid-row: 1/13;
 	overflow: clip;
 	padding: 0;
 	background-image: url("./medias/images/accueil.png");
 	background-size: cover;
-	margin-left: -10px; /*valeur de la goutière de notre grille;*/
+	margin-left: -10px;*/ /*valeur de la goutière de notre grille;*/
 }
 
-.flex-container{
+main.accueil h1{
+	font-size: 4rem;
+	line-height: 3.55rem;
+	/*margin: 0rem;*/
+	margin: 0rem 0rem 1rem 0rem;
+	font-family: "erode";
+	font-kerning: normal;
+	color: black;
+	text-align: center;
+	text-align: left;
+}
+
+main.accueil h2{
+	font-size: 1.75rem;
+	line-height: 1.75rem;
+	margin: 0rem 0rem 2.5rem 0rem;
+	font-family: "erode";
+	font-kerning: normal;
+	color: black;
+	text-align: center;
+	text-align: left;
+}
+
+/*.flex-container{
 	display: flex;
 	flex-wrap: wrap;
 	height: 100%;
@@ -348,11 +375,11 @@ main.accueil{
 	-moz-animation: fadeIn 2s;
 	-o-animation: fadeIn 2s;
 	-ms-animation: fadeIn 2s;
-}
+}*/
 
 .flex-item1{
 	/*background-color: blue;*/
-	flex: 100%;
+	/*flex: 100%;*/
 }
 
 .flex-item2{
@@ -727,6 +754,8 @@ nav h1.menu_elements{
 li{
 	text-align: left;
 }
+
+
 /*<<<<<<<<<< menu */
 
 /* pour toutes les pages >>>>>>>>>> */
