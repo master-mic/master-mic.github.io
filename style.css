@@ -202,8 +202,12 @@ main.article p, main .colophon{
 	line-height: 2rem;
 }
 
-main.article .article_chapeau > p{
+main.article .article_chapeau > p, p.question{
 	font-family: "erode-it";
+}
+
+p.question{
+	margin-bottom: 1em;
 }
 
 /*page index*/
