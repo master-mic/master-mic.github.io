@@ -285,6 +285,7 @@ img{
     -webkit-animation-name: flash_one;
     animation-name: flash_one;
     animation-duration: 0.5s;
+    animation-delay: 0.75s;
 }
 
 @-webkit-keyframes flash_one {
