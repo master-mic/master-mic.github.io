@@ -1,0 +1,584 @@
+body{
+    font-family: "erode-reg";
+    margin: 0px ;
+    /* height: 100vh ; */
+}
+
+header{
+    /*pour le site web*/
+}
+
+
+/* Couverture */
+
+.couverture h1{
+    font-size: 50pt;
+    width: 100%;
+    margin-bottom: 40.8pt;
+    font-family: "erode-bold";
+    text-align: left;
+}
+
+.couv-part1, .couv-part2 {
+    width: 60%;
+    box-sizing: border-box;
+    padding: 0px;
+    padding-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.couv-part1{
+    margin-bottom: 10.2pt;
+}
+
+.colum-gd{
+    width: 66%;
+}
+.colum-sm{
+    width: 33%;
+}
+
+header p.rappel{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 3px;
+    font-family: "erode-bold";
+    color: black;
+    line-height: 10.2pt;
+}
+
+header h2{
+    padding-bottom: 0;
+    margin-bottom: 2pt;
+    margin-top: 0pt;
+}
+
+
+/* Structure générale */
+
+section{
+    column-count: 2;
+    column-gap: 0.5cm;
+    column-fill: auto;
+    break-before: page;
+}
+
+.scroller{
+    /*pour le site web*/
+}
+
+
+/* Structure avant-propos */
+
+section#anchor1, section#anchor8{
+    column-count: 1;
+    column-gap: 0.25cm;
+    column-fill: fill;
+    margin-right: 2.5cm;
+}
+
+
+
+/* Textes */
+
+h1, h2{
+    font-weight: 100;
+}
+
+h1 {
+    font-family: "erode-bold";
+    /* margin-top: 2cm; */
+    line-height: 12pt;
+    font-size: 28pt;
+    text-align: right;
+    margin: 12pt 0;
+}
+
+.mediation h1 {
+    text-align: left;
+}
+
+h2{
+    margin: 12pt 0 11pt 0;
+    font-family: "erode-bold";
+    letter-spacing: -0.28px;
+    font-size: 10.5pt;
+}
+
+h3{
+    margin: 12pt 0 11.7pt 0;
+    font-family: "erode-bold";
+    letter-spacing: -0.28px;
+    font-size: 10.2pt;
+}
+
+
+.chapo{
+    font-family: "erode-regit";
+}
+
+
+p{
+    text-align: justify;
+    /* text-align: left; */
+    hyphens: auto;
+    font-size: 10.2pt;
+    line-height: 12pt;
+    column-fill: auto;
+    margin: 0;
+    margin-bottom: 12pt;
+    /* text-indent: 2em; */
+    text-align-last: left;
+    color: rgb(75, 75, 75);
+}
+
+p.avantpropos{
+    margin-top: 0px;
+    font-size: 11pt;
+    line-height: 13.16pt;
+    /* margin-bottom: 9pt; */
+    margin-bottom: 13.16pt;
+    text-align: left;
+    hyphens:manual;
+    text-indent: 0;
+    font-family: "erode-bold";
+    color: black;
+}
+
+.question{
+    /* font-family: "erode-reg";
+    margin-bottom: 12pt;
+    text-align: center; */
+    font-family: "erode-bold";
+    margin: 12pt 0pt 12pt 0em;
+    text-align: justify;
+    hyphens: auto;
+    color: rgb(50, 50, 50);
+
+}
+
+.colophon h3{
+    color: rgb(50, 50, 50);
+    margin-bottom: 0;
+    line-height: 12pt;
+}
+
+section.scaninfo{
+    column-count: 1;
+    align-content: center;
+}
+
+p.livre{
+    margin: auto;
+    text-align: center;
+    text-align-last: center;
+}
+
+
+.it{
+    font-family: "erode-regit";
+}
+
+.reg{
+    font-family: "erode-reg";
+}
+
+.gray {
+    color: rgb(150, 150, 150);
+}
+
+.boldit {
+    font-family: "erode-boldit";
+}
+
+.bold{
+    font-family: "erode-bold";
+}
+
+.legendes{
+    font-size: 9.2pt;
+    font-family: "erode-bold";
+    margin-top: 36pt;
+    line-height: 12pt;
+}
+
+sup{
+    vertical-align: top;
+		position: relative;
+		top: -0.2em;
+}
+
+
+
+/* Marges supérieures pour titres */
+
+#anchor2{
+    margin-top: 384pt; /*28*12pt*/
+}
+
+#anchor3{
+    margin-top: 144pt; /*12*12pt*/
+}
+
+#anchor4{
+    margin-top: 72pt; /*5*12pt*/
+}
+
+#anchor5{
+    margin-top: 480pt; /*(12+23)*12pt*/ 
+}
+
+#anchor6{
+    margin-top: 192.5pt;
+}
+
+.nomargintop{
+    margin-top: 0;
+}
+
+
+
+/* Paramètres pages et marges */
+
+@page{
+    size: 195mm 260mm;
+    /* size: A4; */
+    marks: crop;
+    bleed: 3mm;
+    margin: 0.9cm 1cm;
+}
+
+@page:left{
+    @bottom-left{
+        content: counter(page);
+        font-size: 10.2pt;
+        font-family: "erode-reg";
+        padding-bottom: 2mm;
+    }
+}
+
+@page:right{
+    @bottom-right{
+        content: counter(page);
+        font-size: 10.2pt;
+        font-family: "erode-reg";
+        padding-bottom: 2mm;
+    }
+}
+
+
+/* Imports vague */
+
+@page :nth(3){
+        background-image: url("./medias/g-01.png");
+        background-size: 198mm 266mm;
+        background-position: inherit;
+        background-repeat: no-repeat;
+        background-position-x: 3mm;
+}
+
+@page :nth(4){
+        background-image: url("./medias/g-02.png");
+        background-size: 198mm 266mm;
+        background-position: inherit;
+        background-repeat: no-repeat;
+}
+
+@page :nth(5){
+        background-image: url("./medias/g-03.png");
+        background-size: 198mm 266mm;
+        background-position: inherit;
+        background-repeat: no-repeat;
+        background-position-x: 3mm;
+}
+
+@page :nth(6){
+        background-image: url("./medias/g-04.png");
+        background-size: 198mm 266mm;
+        background-position: left;
+        background-repeat: no-repeat;
+}
+
+@page :nth(7){
+        background-image: url("./medias/g-05.png");
+        background-size: 198mm 266mm;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-position-x: 3mm;
+}
+
+@page :nth(8){
+        background-image: url("./medias/g-06.png");
+        background-size: 198mm 266mm;
+        background-position: left;
+        background-repeat: no-repeat;
+}
+
+@page :nth(11){
+        background-image: url("./medias/g-07.png");
+        background-size: 198mm 266mm;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-position-x: 3mm;
+}
+
+@page :nth(12){
+        background-image: url("./medias/g-08.png");
+        background-size: 198mm 266mm;
+        background-position: left;
+        background-repeat: no-repeat;
+}
+
+@page :nth(13){
+        background-image: url("./medias/g-09.png");
+        background-size: 198mm 266mm;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-position-x: 3mm;
+}
+
+@page :nth(14){
+        background-image: url("./medias/g-10.png");
+        background-size: 198mm 266mm;
+        background-position: left;
+        background-repeat: no-repeat;
+}
+
+@page :nth(15){
+        background-image: url("./medias/g-11.png");
+        background-size: 198mm 266mm;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-position-x: 3mm;
+}
+
+@page :nth(16){
+        background-image: url("./medias/g-12.png");
+        background-size: 198mm 266mm;
+        background-position: left;
+        background-repeat: no-repeat;
+}
+
+@page :nth(17){
+        background-image: url("./medias/g-13.png");
+        background-size: 198mm 266mm;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-position-x: 3mm;
+}
+
+@page :nth(18){
+        background-image: url("./medias/g-14.png");
+        background-size: 198mm 266mm;
+        background-position: left;
+        background-repeat: no-repeat;
+}
+
+@page :nth(21){
+        background-image: url("./medias/g-15.png");
+        background-size: 198mm 266mm;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-position-x: 3mm;
+}
+
+@page :nth(22){
+    background-image: url("./medias/g-16.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+@page :nth(23){
+    background-image: url("./medias/g-17.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-x: 3mm;
+}
+
+@page :nth(24){
+    background-image: url("./medias/g-18.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+@page :nth(25){
+    background-image: url("./medias/g-19.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-x: 3mm;
+}
+
+@page :nth(26){
+    background-image: url("./medias/g-20.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+@page :nth(27){
+    background-image: url("./medias/g-21.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-x: 3mm;
+}
+
+@page :nth(34){
+    background-image: url("./medias/g-22.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* Pages pour scans livres */
+
+@page :nth(9){
+    background-image: url("./medias/txt-maryline.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-x: 3mm;
+}
+
+@page :nth(10){
+    background-image: url("./medias/txt-maryline-verso.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+@page :nth(19){
+    background-image: url("./medias/txt-juan.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-x: 3mm;
+}
+
+@page :nth(20){
+    background-image: url("./medias/txt-juan-verso.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+@page :nth(28){
+    background-image: url("./medias/txt-gherasim-a.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+@page :nth(29){
+    background-image: url("./medias/txt-gherasim-b.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-x: 3mm;
+}
+
+@page :nth(30){
+    background-image: url("./medias/txt-gherasim-c.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+@page :nth(31){
+    background-image: url("./medias/txt-gherasim-d.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-x: 3mm;
+}
+
+@page :nth(32){
+    background-image: url("./medias/txt-gherasim-e.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+@page :nth(33){
+    background-image: url("./medias/txt-gherasim-f.png");
+    background-size: 198mm 266mm;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-x: 3mm;
+}
+
+/* Cacher les numéros de page sur 1re, 2e, 3e et 4e de couv*/
+@page :nth(1){
+    /*background-color: pink;*/
+    @bottom-right{
+        color: transparent;
+    }
+}
+@page :nth(2){
+    /*background-color: pink;*/
+    @bottom-left{
+        color: transparent;
+    }
+}
+@page :nth(35){
+    /*background-color: pink;*/
+    @bottom-right{
+        color: transparent;
+    }
+}
+@page :nth(36){
+    /*background-color: pink;*/
+    @bottom-left{
+        color: transparent;
+    }
+}
+
+
+/* Fond gris à supprimer avant impression */
+
+/* @page :nth(1){
+    background-color: #313638;
+}
+@page :nth(2){
+    background-color: #313638;
+}
+@page :nth(35){
+    background-color: #313638;
+}
+@page :nth(36){
+    background-color: #313638;
+} */
+
+
+/*à réactiver avec le script*/
+particle{ 
+    hyphens: auto;
+    letter-spacing: -0.01em;
+}
+
+
+@font-face {
+    font-family: "erode-reg";
+    src: url(./fonts/Erode-Regular.otf);
+}
+@font-face {
+    font-family: "erode-bold";
+    src: url(./fonts/Erode-Bold.otf);
+}
+@font-face {
+    font-family: "erode-regit";
+    src: url(./fonts/Erode-Italic.otf);
+}
+@font-face {
+    font-family: "erode-boldit";
+    src: url(./fonts/Erode-BoldItalic.otf);
+}

@@ -1,0 +1,423 @@
+::selection {
+    background: lightgrey;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+	animation: fadeIn 0.5s;
+	-webkit-animation: fadeIn 0.5s;
+	-moz-animation: fadeIn 0.5s;
+	-o-animation: fadeIn 0.5s;
+	-ms-animation: fadeIn 0.5s;
+}
+
+html{
+    font-size: 13.5pt;
+    
+}
+
+body{
+    font-family: "erode-reg";
+    margin: 0px ;
+    height: 100vh ;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    background-color: transparent;
+}
+
+nav{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    z-index: -10;
+    width: 750px;
+    height: 100px;
+    min-width: 450px;
+    margin: auto;
+}
+
+
+header{
+    display: none;
+}
+
+main{
+    height: calc(100% - 100px);
+    overflow-y: clip;
+    padding: 0.5rem;
+    object-fit: contain;
+
+}
+
+
+section {
+    /* column-count : 4; */
+/*  column-width : 20vw;
+    column-fill : auto;
+    height : 100% ;
+    column-gap: 2vw ;
+    overflow-y: hidden; */
+    -webkit-column-break-after: always;
+    break-after: always;
+}
+
+.scroller{
+    /* column-width : 17vw; */
+    column-width: 447px;
+    column-fill : auto;
+    height : 100%;
+    column-gap: 15px;
+    overflow-y: hidden;
+    /* scrollbar-color: black white; */
+    scroll-behavior: smooth;
+    /* scrollbar-width: thin; */
+    /* column-rule: 1px solid black; */
+    /* background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(152,152,152,1) 45%, rgba(0,0,0,1) 100%); */
+}
+
+/* .separator{
+    width: 2px;
+    height: 25vh;
+    background-color: black;
+} */
+
+h1 {
+    font-family: "erode-bold" ;
+    margin-top: 0rem;
+    margin-bottom: 0;
+    /* margin-top: 200pt; */
+    text-align: left;
+}
+
+h1, h2, h3{
+    font-size: 0.9rem;
+    font-weight: 100;
+    margin: 0;
+}
+
+h2{
+    /* margin-bottom: 1rem; */
+}
+
+h3{
+    font-weight: 100;
+    font-family: "erode-bold" ;
+    font-size: 0.8rem;
+}
+
+.chapo{
+    font-family: "erode-regit";
+    /* -webkit-column-break-after: always; */
+}
+
+.it{
+    font-family: "erode-regit";
+}
+
+.reg{
+    font-family: "erode-reg";
+}
+
+.boldit {
+    font-family: "erode-boldit";
+}
+
+.avantpropos{
+    font-family: "erode-bold";
+    /* text-indent: 2em; */
+}
+
+#anchor1 h1{
+    font-family: "erode-bold";
+    font-size: 0.9rem;
+    margin-bottom: 0rem;
+    /* column-span: all; */
+    /* margin-top: 198pt; */
+    margin-top: 0;
+}
+
+.colophon h1{
+    margin-bottom: 1rem;
+}
+
+#anchor1 h2{
+    /* font-family: "erode-bold";
+    line-height: 1.25rem;
+    margin: 0;
+    font-size: 0.9rem; */
+    /* text-indent: 2em; */
+    margin-bottom: 1rem;
+}
+
+#anchor1 p{
+    font-family: "erode-bold";
+    /* column-span: all; */
+    margin-bottom: 1rem;
+    margin-top: 0pt;
+    text-align: left;
+    /* hyphens: none; */
+    font-size: 0.8rem;
+}
+
+.imprimer:hover{
+    font-family: "erode-boldit";
+    color: black;
+}
+
+.imprimer{
+    font-family: "erode-bold";
+    display: block;
+    margin-bottom: 1rem;
+}
+
+summary:after{
+    content: "[lire]";
+    font-family: "erode-reg";
+    border-bottom: 1px solid black;
+    padding-bottom: 1px;
+    /* color: grey; */
+}
+
+
+
+summary{
+    list-style : none;
+    margin-top: 0rem;
+    text-align: left;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+summary:hover{
+    color: rgb(150, 150, 150);
+}
+
+details[open] summary:after {
+    content: "[raccourcir]";
+    color: white;
+    background-color: black;
+}
+
+details[open] summary:hover:after {
+    color: black;
+    background-color: white;
+}
+
+.print{
+    display: none;
+
+}
+
+section p:first-child{
+    /* color: lime; */
+    margin-top: 0;
+    text-indent: 0em;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: rgb(150, 150, 150);
+}
+.gray{
+    color: rgb(150, 150, 150);
+}
+
+p{
+    text-align: justify;
+    hyphens: auto;
+    /* text-align: left; */
+    margin: 0;
+    margin-bottom: 1rem;
+    orphans: 2;
+    widows: 2;
+}
+
+.question{
+    font-family: "erode-bold";
+    margin-bottom: 0rem;
+    margin-top: 1rem;
+    /* margin-right: 1em; */
+    break-after: avoid;
+    /* break-inside: avoid; */
+}
+
+img{
+    width: 100%;;
+}
+
+.animate__flash {
+    -webkit-animation-name: flash;
+    animation-name: flash;
+    animation-duration: 0.5s;
+    animation-delay: 0.75s;
+}
+
+@-webkit-keyframes flash {
+    0%,50%,to {
+        opacity: 1
+    }
+
+    25%,75% {
+        opacity: 0
+    }
+}
+
+@keyframes flash {
+    0%,50%,to {
+        opacity: 1
+    }
+
+    25%,75% {
+        opacity: 0
+    }
+}
+
+
+.animate__flash__one {
+    -webkit-animation-name: flash_one;
+    animation-name: flash_one;
+    animation-duration: 0.5s;
+}
+
+@-webkit-keyframes flash_one {
+    0%,to {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+}
+
+@keyframes flash_one {
+    0%,to {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+}
+
+/* - au chargement de chaque page - */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+@font-face {
+    font-family: "erode-reg";
+    src: url(./fonts/Erode-Regular.otf);
+}
+@font-face {
+    font-family: "erode-bold";
+    src: url(./fonts/Erode-Bold.otf);
+}
+@font-face {
+    font-family: "erode-regit";
+    src: url(./fonts/Erode-Italic.otf);
+}
+@font-face {
+    font-family: "erode-boldit";
+    src: url(./fonts/Erode-BoldItalic.otf);
+}
+
+@media (max-width: 1400px) and (min-width: 951px){
+	html{
+		font-size: 13pt;
+	}
+    .scroller{
+        /* column-width : 17vw; */
+        column-width: 350px;
+        column-fill : auto;
+        height : 100%;
+        column-gap: 15px;
+        overflow-y: hidden;
+        /* scrollbar-color: black white; */
+        scroll-behavior: smooth;
+        /* scrollbar-width: thin; */
+        /* column-rule: 1px solid black; */
+        /* background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(152,152,152,1) 45%, rgba(0,0,0,1) 100%); */
+    }
+    h1, h2, h3{
+        font-size: 0.8rem;
+        font-weight: 100;
+        margin: 0;
+    }
+    nav{
+        height: 100px;
+        width: 750px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 501px){
+	html{
+		font-size: 12pt;
+	}
+    nav{
+        height: 80px;
+        width: 650px;
+    }
+    .scroller{
+        /* column-width : 17vw; */
+        column-width: 350px;
+        column-fill : auto;
+        height : 100%;
+        column-gap: 15px;
+        overflow-y: hidden;
+        /* scrollbar-color: black white; */
+        scroll-behavior: smooth;
+        /* scrollbar-width: thin; */
+        /* column-rule: 1px solid black; */
+        /* background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(152,152,152,1) 45%, rgba(0,0,0,1) 100%); */
+    }
+    h1, h2, h3{
+        font-size: 0.8rem;
+        font-weight: 100;
+        margin: 0;
+    }
+
+}
+
+@media screen and (orientation: portrait), (max-width: 500px){
+    nav{
+        display: none;
+    }
+
+    .scroller{
+        column-width: auto;      /* annule la largeur de colonne fixe */
+        column-count: 1;         /* force une seule colonne */
+        column-gap: 0;           /* supprime l'espace entre colonnes */
+        overflow-x: hidden;      /* plus besoin de défilement horizontal */
+        overflow-y: auto;        /* défilement vertical classique */
+        /* white-space: normal; */
+    }
+    main{
+        height: auto;
+    }
+
+    section {
+        -webkit-column-break-after: avoid;
+        break-after: avoid;
+    }
+}
