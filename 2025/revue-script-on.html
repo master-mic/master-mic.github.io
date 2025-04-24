@@ -351,7 +351,7 @@
             <!-- colophon/remerciements-->
             <section class="colophon">
                 <div class="texte">
-                    <h3 class="titre-dossier">Note sur la conception graphique</h3>
+                    <h3 class="titre-dossier nomargintop">Note sur la conception graphique</h3>
                     <p class="reponse nomargintop"><span class="it">Bavrage</span> et sa communicabilité sont également interrogés à travers les différents supports de la Revue. Si la version web reprend le motif de la vague comme outil de navigation — permettant de se repérer et de passer d’un texte à l’autre — la version papier elle, se laisse peu à peu envahir par ce motif, en clin d'œil à la signalétique de l'espace d'exposition. La lisibilité des textes s'en trouve perturbée, entre jeux de gris sur noir et noir sur blanc.<br><particle style="display: inline-block; z-index: 9999; transform: translate(0px, 0px); pointer-events: auto;"> </particle><particle style="display: inline-block; z-index: 9999; transform: translate(0px, 0px); pointer-events: auto;"> </particle>La bave apparaît ici non plus au seuil des lèvres, mais au seuil des mots : une dimension interactive fait son apparition pour la première fois depuis la création de la Revue et ouvre la voie à une expérience de lecture unique pour chacun•e. Le passage de la souris sur les textes mis en page bouscule, déséquilibre, percute le flux de la lecture, l'amenant à littéralement baver au fil des pages.</p>
                     <p class="reponse">Entièrement créées à partir de langages du web, les publications web et papier découlent du même fichier original écrit en HTML. L'application de feuilles de style CSS (<span class="it">via</span> les media queries @screen et @print) et l'utilisation de la bibliothèque javascript Paged.js permet de jouer avec les spécificités de chaque médium, et illustre la capacité de la Revue à se figurer, à se configurer, voire même à se reconfigurer jusqu'à se fluidifier. C'est, par extension, une façon de repenser les modes de diffusion, et la relation flux : écran : papier.</p>
                     <h3 class="titre-dossier nomargintop" style="break-before: column;">Comité de rédaction</h3>
@@ -406,7 +406,7 @@
     <script src="reload-in-place.js"></script>
 
     <!-- script "bave" -->
-    <script>
+    <!-- <script>
         class MyHandler extends Paged.Handler {
         constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
@@ -471,7 +471,7 @@
         }
         }
         Paged.registerHandlers(MyHandler);
-    </script>
+    </script> -->
 </body>
 </html>
         

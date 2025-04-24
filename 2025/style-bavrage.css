@@ -414,8 +414,16 @@ img{
     }
     main{
         height: auto;
+        padding: 1rem;
     }
-
+    html{
+        font-size: 13.5pt;
+    }
+    h1, h2, h3{
+        font-size: 0.9rem;
+        font-weight: 100;
+        margin: 0;
+    }
     section {
         -webkit-column-break-after: avoid;
         break-after: avoid;
