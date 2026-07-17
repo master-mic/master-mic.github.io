@@ -172,6 +172,59 @@ div.revue_image p{
 	line-height: 2rem;
 }
 
+
+.wavy-circle {
+  --s: 10vh;
+
+  width: var(--s);
+  aspect-ratio: 1;
+
+  --g: /calc(var(--s)*0.156) calc(var(--s)*0.156)
+       radial-gradient(50% 50%, #000 99%, #0000 101%) no-repeat;
+
+  mask:
+    calc(50% + var(--s)*0.396) calc(50% + var(--s)*0) var(--g),
+    calc(50% + var(--s)*0.333) calc(50% + var(--s)*0.214) var(--g),
+    calc(50% + var(--s)*0.164) calc(50% + var(--s)*0.36) var(--g),
+    calc(50% + var(--s)*-0.056) calc(50% + var(--s)*0.392) var(--g),
+    calc(50% + var(--s)*-0.259) calc(50% + var(--s)*0.299) var(--g),
+    calc(50% + var(--s)*-0.38) calc(50% + var(--s)*0.112) var(--g),
+    calc(50% + var(--s)*-0.38) calc(50% + var(--s)*-0.112) var(--g),
+    calc(50% + var(--s)*-0.259) calc(50% + var(--s)*-0.299) var(--g),
+    calc(50% + var(--s)*-0.056) calc(50% + var(--s)*-0.392) var(--g),
+    calc(50% + var(--s)*0.164) calc(50% + var(--s)*-0.36) var(--g),
+    calc(50% + var(--s)*0.333) calc(50% + var(--s)*-0.214) var(--g),
+    radial-gradient(calc(var(--s)*0.438), #000 99%, #0000 101%) subtract,
+    calc(50% + var(--s)*0.47) calc(50% + var(--s)*0.138) var(--g),
+    calc(50% + var(--s)*0.32) calc(50% + var(--s)*0.37) var(--g),
+    calc(50% + var(--s)*0.07) calc(50% + var(--s)*0.484) var(--g),
+    calc(50% + var(--s)*-0.203) calc(50% + var(--s)*0.445) var(--g),
+    calc(50% + var(--s)*-0.412) calc(50% + var(--s)*0.265) var(--g),
+    calc(50% + var(--s)*-0.489) calc(50% + var(--s)*0) var(--g),
+    calc(50% + var(--s)*-0.412) calc(50% + var(--s)*-0.265) var(--g),
+    calc(50% + var(--s)*-0.203) calc(50% + var(--s)*-0.445) var(--g),
+    calc(50% + var(--s)*0.07) calc(50% + var(--s)*-0.484) var(--g),
+    calc(50% + var(--s)*0.32) calc(50% + var(--s)*-0.37) var(--g),
+    calc(50% + var(--s)*0.47) calc(50% + var(--s)*-0.138) var(--g);
+
+  background: #1e90ffd4;
+
+  position: absolute;
+
+  /*! left: clamp(120px, 18vw, 190px); */
+  /*! top: 41vh; */
+
+  margin-left: 10%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "erode";
+  font-style: oblique;
+  font-size: clamp(12px, 1.3vw, 18px);
+}
+
 /*page d'article*/
 main.article h1{
 	font-size: 2.25rem;
@@ -726,6 +779,7 @@ p.legendes{
 }
 
 /*La Revue*/
+
 #menu_element_5{
 	grid-row: 5;
 	grid-column: 7 / span 6;
